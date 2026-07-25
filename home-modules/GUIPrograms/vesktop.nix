@@ -1,3 +1,5 @@
+{ assets, ... }:
+
 {
   #xdg.desktopEntries.vesktop = {
     #name = "Vesktop (Wayland)";
@@ -12,6 +14,6 @@
   programs.vesktop.enable = true;
 
   programs.vesktop.vencord.themes = {
-    "theme.css" = ../configFiles/vesktop/theme.css;
+    "theme.css" = toString (assets.configFiles + "/vesktop/theme.css");
   };
 }

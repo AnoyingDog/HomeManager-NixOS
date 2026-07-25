@@ -83,6 +83,7 @@
                 wallpaper = ./assets/wallpapers/default-wallpaper.png;
                 wallpaper-dir = ./assets/wallpapers;
                 profile-picture = ./assets/profile-picture.png;
+                configFiles = ./configFiles;
               };
 
             };

@@ -571,7 +571,7 @@
               enabled = true;
               glyph = "";
               label = "";
-              shortcut = "4";
+              shortcut = "r";
               variant = "default";
             }
             {
@@ -581,7 +581,7 @@
               enabled = true;
               glyph = "";
               label = "";
-              shortcut = "5";
+              shortcut = "s";
               variant = "destructive";
             }
           ];

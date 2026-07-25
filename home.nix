@@ -6,12 +6,8 @@
     (inputs.import-tree ./home-modules )
       ];
 
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   home = {
     username = "leon";
-    homeDirectory = "/home/leon";
     stateVersion = "26.05"; 
     sessionVariables = {
       EDITOR = "nvim";
@@ -63,9 +59,6 @@
     zen-browser = {
       enable = true;
       setAsDefaultBrowser = true;
-    };
-    prismlauncher = {
-      enable = true;
     };
   };
 

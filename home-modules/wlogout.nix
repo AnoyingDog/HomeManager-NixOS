@@ -1,6 +1,8 @@
+{ assets, ... }:
+
 {
   programs.wlogout = {
     enable = true;
   };
-  xdg.configFile."wlogout".source = ./configFiles/wlogout;
+  xdg.configFile."wlogout".source = toString (assets.configFiles + "/wlogout");
 }

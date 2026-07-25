@@ -2,12 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    firefox
-      git
-      neovim
-      yazi
-      htop
-
       playerctl
       brightnessctl
       fanctl

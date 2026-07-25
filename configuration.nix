@@ -24,8 +24,6 @@
     ModelBouncingKeys=1
       '';
 
-
-#Configure Fonts
   fonts.fontconfig.enable = true;
 
 # This value determines the NixOS release from which the default
