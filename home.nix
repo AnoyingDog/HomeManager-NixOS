@@ -69,10 +69,6 @@
     };
   };
 
-  services = {
-    dunst.enable = false;
-  };
-
   catppuccin = {
     autoEnable = false;
     enable = true;

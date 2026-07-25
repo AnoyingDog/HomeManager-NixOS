@@ -1,10 +1,13 @@
-{ pkgs,... }:
+{ pkgs, inputs, ... }:
 
 {
   home.packages = with pkgs; [
     neovim
     opencode
+
     nerd-fonts.caskaydia-cove
+    noto-fonts-cjk-sans
+
     ffmpeg
     ripgrep
     fzf
@@ -53,8 +56,8 @@
     wireplumber
     pavucontrol
 
-    chromium
     firefox
+    inputs.helium.packages.${system}.default
     
     _7zip-zstd
     zstd

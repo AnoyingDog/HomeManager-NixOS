@@ -20,12 +20,12 @@
     -- exec-once now lives inside the hyprland.start event so it only ever
     -- runs once at boot, even though hyprland.lua gets re-parsed on save.
     hl.on("hyprland.start", function()
+
       hl.exec_cmd("vesktop", { workspace = "2 silent" })
       hl.exec_cmd("steam -silent")
 
       hl.exec_cmd("hyprpaper")
       hl.exec_cmd("noctalia")
-      hl.exec_cmd("dunst")
       hl.exec_cmd("hypridle")
 
       hl.exec_cmd("systemctl --user start hyprpolkitagent")
