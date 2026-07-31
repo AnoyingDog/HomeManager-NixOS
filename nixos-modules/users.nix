@@ -7,7 +7,8 @@
       shell = pkgs.fish;
       isNormalUser = true;
       description = "leon";
-      extraGroups = [ "networkmanager" "wheel" "audio" "jackaudio" "lp" "lpadmin" "video" "render" "libvirtd"];
+      extraGroups = [ "networkmanager" "wheel" "audio" "jackaudio" "lp" "lpadmin" "video" "render" "libvirtd " "docker" ];
+
     };
   };
 }

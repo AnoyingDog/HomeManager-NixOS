@@ -22,6 +22,9 @@
     pinentry-curses
     xdg-desktop-portal-hyprland
     cava
+    libnotify
+    git
+    github-cli
 
     r2modman
     osu-lazer-bin
@@ -46,6 +49,7 @@
     calf                   # Calf Studio Gear (chorus, reverb, EQ, …)
     zam-plugins            # ZaMaximX2, ZaMultiComp, ZaReverb, …
     mda_lv2                # MDA classic plug-ins ported to LV2
+    alsa-scarlett-gui
     mod-distortion         # MOD Distortion plug-ins
 
     # Utilities

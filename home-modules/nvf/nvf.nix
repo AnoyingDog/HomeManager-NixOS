@@ -68,6 +68,9 @@
             "size"
             "mtime"
           ];
+          view_options = {
+            show_hidden = true;
+          };
         };
       };
 
@@ -86,6 +89,7 @@
         mappings = {
           codeAction = "<leader>ca";
           hover = "K";
+          listReferences = "<leader>vrr";
         };
       };
 
@@ -97,6 +101,7 @@
       };
 
       languages = {
+      enableFormat = true;
         nix = {
           enable = true;
           format = {
@@ -108,6 +113,15 @@
           treesitter.enable = true;
         };
         markdown.enable = true;
+        bash = {
+          enable = true;
+          format.enable = true;
+          extraDiagnostics.enable = true;
+        };
+        docker = {
+          enable = true;
+          extraDiagnostics.enable = true;
+        };
       };
 
       keymaps = [

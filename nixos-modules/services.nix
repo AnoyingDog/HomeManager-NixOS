@@ -26,6 +26,8 @@
 
     openssh.enable = true;
 
+    flatpak.enable = true;
+
     qemuGuest.enable = true;
 
     upower.enable = true;

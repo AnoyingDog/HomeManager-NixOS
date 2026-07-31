@@ -3,8 +3,7 @@
 {
   programs = {
     fish.enable = true;
-    steam = {
-      enable = true;
+    steam = { enable = true;
       remotePlay.openFirewall = true;
     };
 
@@ -47,5 +46,7 @@
     };
 
     virt-manager.enable = true;
+
+    direnv.enable = true;
   };
 }

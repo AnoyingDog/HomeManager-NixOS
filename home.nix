@@ -29,6 +29,8 @@
 
   fonts.fontconfig.enable = true;
 
+  xdg.enable = true;
+
   programs = {
 
     fastfetch.enable = true;
@@ -38,17 +40,6 @@
       enable = true;
       settings = {
         vim_keys = true;
-      };
-    };
-
-    git = {
-      enable = true;
-      settings = {
-        user = {
-          Name = "AnoyingDog";
-          Email = "188097811+AnoyingDog@users.noreply.github.com";
-        };
-        init.defaultBranch = "main";
       };
     };
 

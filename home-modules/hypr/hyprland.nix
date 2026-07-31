@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, scripts, ... }:
 
 {
   services = {
@@ -152,8 +152,8 @@
 
     hl.bind(mainMod .. " + SHIFT + L", hl.dsp.exec_cmd("${lib.getExe pkgs.hyprlock}"))
     hl.bind(mainMod .. " + P", hl.dsp.exec_cmd("hyprpicker -a --format=hex"))
-    hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("~/.scripts/RestartWaybar.sh"))
-    hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("~/.scripts/GetActiveWindowTitle.sh"))
+    hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("${toString (scripts + "/GetActiveWindowTitle.sh")}"))
+    hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("${toString (scripts + "/ToggleMic.sh")}"))
 
     hl.bind(mainMod .. " + S", hl.dsp.exec_cmd("${lib.getExe pkgs.hyprshot} -m region --freeze"))
     hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("${lib.getExe pkgs.hyprshot} -m window --freeze"))

@@ -8,7 +8,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
 
     maccel = {
@@ -54,7 +53,7 @@
 
   outputs = inputs@{ nixpkgs, home-manager,... }:
 
-    let
+  let
     system = "x86_64-linux";
   in
   {
@@ -85,6 +84,8 @@
                 profile-picture = ./assets/profile-picture.png;
                 configFiles = ./configFiles;
               };
+              
+              scripts = ./scripts;
 
             };
 
@@ -95,7 +96,12 @@
             home-manager.users.leon = import ./home.nix;
           }
       ];
-    };
+    }; 
 
+    packages."x86_64-linux".default =
+      (inputs.nvf.lib.neovimConfiguration {
+        pkgs = nixpkgs.legacyPackages."x86_64-linux";
+        modules = [./home-modules/nvf/nvf.nix];
+      }).neovim;
   };
 }
