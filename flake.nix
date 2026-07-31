@@ -51,7 +51,7 @@
 
   };
 
-  outputs = inputs@{ nixpkgs, home-manager,... }:
+  outputs = inputs@{ nixpkgs, home-manager, nvf, ... }:
 
   let
     system = "x86_64-linux";
@@ -84,7 +84,7 @@
                 profile-picture = ./assets/profile-picture.png;
                 configFiles = ./configFiles;
               };
-              
+
               scripts = ./scripts;
 
             };
@@ -99,9 +99,9 @@
     }; 
 
     packages."x86_64-linux".default =
-      (inputs.nvf.lib.neovimConfiguration {
-        pkgs = nixpkgs.legacyPackages."x86_64-linux";
-        modules = [./home-modules/nvf/nvf.nix];
-      }).neovim;
+      (nvf.lib.neovimConfiguration {
+       pkgs = nixpkgs.legacyPackages."x86_64-linux";
+       modules = [./home-modules/nvf/nvf.nix];
+       }).neovim;
   };
 }
