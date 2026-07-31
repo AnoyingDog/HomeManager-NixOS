@@ -51,7 +51,7 @@
 
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, nvf, ... }:
+  outputs = inputs@{ nixpkgs, home-manager, ... }:
 
   let
     system = "x86_64-linux";
@@ -97,11 +97,5 @@
           }
       ];
     }; 
-
-    packages."x86_64-linux".default =
-      (nvf.lib.neovimConfiguration {
-       pkgs = nixpkgs.legacyPackages."x86_64-linux";
-       modules = [./home-modules/nvf/nvf.nix];
-       }).neovim;
   };
 }
