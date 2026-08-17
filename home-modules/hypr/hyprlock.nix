@@ -66,7 +66,7 @@
 
       background {
         monitor =
-        path = ${toString assets.wallpaper}
+        path = ${toString (assets.wallpaper)}
         blur_passes = 0
         color = $base
       }
@@ -106,7 +106,7 @@
 
       image {
         monitor =
-        path = ${toString assets.profile-picture}
+        path = ${toString (assets.profile-picture)}
         size = 150
         border_color = $accent
         position = 0, 75

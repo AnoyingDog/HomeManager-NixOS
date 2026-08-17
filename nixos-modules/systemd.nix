@@ -1,3 +1,5 @@
+{ pkgs, ... }:
+
 {
   systemd = {
     services.NetworkManager-wait-online.enable = false;
@@ -6,5 +8,6 @@
       DefaultTimeoutStartSec = "15s";
       DefaultTimeoutStopSec = "15s";
     };
+
   };
 }

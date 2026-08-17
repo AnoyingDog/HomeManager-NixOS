@@ -6,7 +6,6 @@
   programs.noctalia = {
     enable = true;
 
-
     settings = {
       accessibility = {
         high_contrast = false;
@@ -24,7 +23,7 @@
       backdrop = {
         blur_intensity = 0.5;
         enabled = false;
-        tint_intensity = 0.3;
+        tint_intensity = 0.30000001192092896;
       };
 
       bar = {
@@ -40,21 +39,12 @@
           capsule_group = [ ];
           capsule_opacity = 1.0;
           capsule_padding = 6.0;
-          capsule_thickness = 0.76;
+          capsule_thickness = 0.75999999046325684;
           center = [ "workspaces" ];
           concave_edge_corners = true;
           contact_shadow = false;
           enabled = true;
-          end = [
-            "media"
-            "notifications"
-            "clipboard"
-            "volume"
-            "brightness"
-            "battery"
-            "clock"
-            "session"
-          ];
+          end = [ "media" "notifications" "clipboard" "volume" "brightness" "battery" "clock" "session" ];
           font_weight = 600;
           hover_highlight = true;
           layer = "top";
@@ -74,22 +64,11 @@
           shadow = true;
           show_on_workspace_switch = true;
           smart_auto_hide = false;
-          start = [
-            "control-center"
-            "launcher"
-            "wallpaper"
-            "tray"
-          ];
+          start = [ "control-center" "launcher" "wallpaper" "tray" ];
           thickness = 34;
           widget_spacing = 6;
 
-          dead_zone = {
-            command = "";
-            middle_command = "";
-            right_command = "";
-            scroll_down_command = "";
-            scroll_up_command = "";
-          };
+          dead_zone = { };
         };
       };
 
@@ -111,12 +90,17 @@
 
       control_center = {
         hidden_tabs = [ ];
+        show_session_button = true;
+        show_shortcut_labels = true;
         sidebar = "full";
         sidebar_section = "full";
         width = 700;
 
         calendar = {
+          event_date_format = "%A %e %B";
+          event_time_format = "%H:%M";
           show_events_card = true;
+          show_week_numbers = false;
         };
 
         shortcuts = [
@@ -145,22 +129,23 @@
         active_opacity = 1.0;
         active_scale = 1.0;
         auto_hide = true;
-        background_opacity = 0.88;
+        background_opacity = 0.87999999523162842;
         border = "outline";
         border_width = 0.0;
         concave_edge_corners = true;
         cross_axis_padding = 8;
         enabled = false;
         icon_size = 48;
-        inactive_opacity = 0.85;
-        inactive_scale = 0.85;
+        inactive_opacity = 0.85000002384185791;
+        inactive_scale = 0.85000002384185791;
         item_spacing = 6;
         launcher_custom_image = "";
         launcher_custom_image_colorize = false;
         launcher_icon = "grid-dots";
         launcher_position = "none";
+        layer = "top";
         magnification = true;
-        magnification_scale = 1.45;
+        magnification_scale = 1.4500000476837158;
         main_axis_padding = 16;
         margin_edge = 0;
         margin_ends = 0;
@@ -202,20 +187,24 @@
       };
 
       hot_corners = {
+        delay_ms = 0;
         enabled = false;
 
         bottom_left = {
           action = "none";
           command = "";
         };
+
         bottom_right = {
           action = "none";
           command = "";
         };
+
         top_left = {
           action = "none";
           command = "";
         };
+
         top_right = {
           action = "none";
           command = "";
@@ -223,11 +212,7 @@
       };
 
       idle = {
-        behavior_order = [
-          "lock"
-          "screen-off"
-          "lock-and-suspend"
-        ];
+        behavior_order = [ "lock" "screen-off" "lock-and-suspend" ];
         pre_action_fade_seconds = 2.0;
 
         behavior = {
@@ -235,20 +220,25 @@
             action = "lock";
             command = "";
             enabled = false;
+            locked_timeout = 0.0;
             resume_command = "";
             timeout = 600.0;
           };
+
           "lock-and-suspend" = {
             action = "lock_and_suspend";
             command = "";
             enabled = false;
+            locked_timeout = 0.0;
             resume_command = "";
             timeout = 900.0;
           };
+
           "screen-off" = {
             action = "screen_off";
             command = "";
             enabled = false;
+            locked_timeout = 0.0;
             resume_command = "";
             timeout = 660.0;
           };
@@ -257,17 +247,16 @@
 
       keybinds = {
         cancel = [ "Escape" ];
+        copy = [ "Ctrl+c" ];
+        delete = [ "Delete" ];
         down = [ "Down" ];
         left = [ "Left" ];
         right = [ "Right" ];
+        save = [ "Ctrl+s" ];
         tab_next = [ "Tab" ];
         tab_previous = [ "Shift+ISO_Left_Tab" ];
         up = [ "Up" ];
-        validate = [
-          "Return"
-          "KP_Enter"
-          "space"
-        ];
+        validate = [ "Return" "KP_Enter" "space" ];
       };
 
       location = {
@@ -284,18 +273,16 @@
         blurred_desktop = false;
         enabled = true;
         fingerprint = true;
+        lock_before_suspend = true;
         monitors = [ ];
-        tint_intensity = 0.3;
+        tint_intensity = 0.30000001192092896;
         wallpaper = "";
       };
 
       lockscreen_widgets = {
         enabled = false;
         schema_version = 2;
-        widget_order = [
-          "lockscreen-login-box@DP-3"
-          "lockscreen-login-box@DP-2"
-        ];
+        widget_order = [ "lockscreen-login-box@DP-3" "lockscreen-login-box@DP-2" ];
 
         grid = {
           cell_size = 16;
@@ -324,7 +311,6 @@
               show_caps_lock = true;
               show_keyboard_layout = true;
               show_login_button = true;
-              show_password_hint = true;
             };
           };
 
@@ -348,7 +334,6 @@
               show_caps_lock = true;
               show_keyboard_layout = true;
               show_login_button = true;
-              show_password_hint = true;
             };
           };
         };
@@ -362,11 +347,13 @@
       };
 
       notification = {
-        background_opacity = 0.8;
+        background_opacity = 0.79999995231628418;
         border = true;
         collapse_on_dismiss = true;
         enable_daemon = true;
+        history_retention_hours = 0;
         layer = "top";
+        max_visible = 0;
         monitors = [ "DP-2" ];
         offset_x = 20;
         offset_y = 8;
@@ -377,8 +364,9 @@
       };
 
       osd = {
-        background_opacity = 0.97;
+        background_opacity = 0.97000002861022949;
         border = true;
+        enabled = true;
         monitors = [ "DP-2" ];
         offset_x = 20;
         offset_y = 8;
@@ -432,25 +420,30 @@
         app_icon_colorize = false;
         avatar_path = toString assets.profile-picture;
         button_borders = true;
+        card_borders = true;
         clipboard_auto_paste = "auto";
         clipboard_confirm_clear_history = true;
         clipboard_enabled = true;
         clipboard_history_max_entries = 100;
         clipboard_image_action_command = "";
+        clipboard_keep_from_closed_apps = true;
         corner_radius_scale = 1.0;
         date_format = "%A, %x";
         disable_mipmaps = false;
         external_ip_enabled = false;
-        font_family = "sans-serif";
+        font_family = "Noto Sans CJK JP";
+        input_borders = true;
         launch_apps_as_systemd_services = false;
         launch_apps_custom_command = "";
-        middle_click_opens_widget_settings = true;
         niri_overview_type_to_launch_enabled = false;
         offline_mode = false;
         password_style = "default";
         polkit_agent = false;
+        popup_borders = true;
+        popup_shadows = true;
         screen_time_enabled = true;
         settings_show_advanced = true;
+        settings_window_translucent = false;
         setup_wizard_enabled = true;
         shared_gl_context = true;
         show_location = true;
@@ -466,10 +459,15 @@
           auto_sync = false;
         };
 
+        keyboard_layout = { };
+
         launcher = {
           app_grid = false;
+          auto_paste = "auto";
           categories = true;
           compact = false;
+          fetch_exchange_rates = true;
+          pinned = [ ];
           provider_prefix = "/";
           show_icons = true;
           sort_by_usage = true;
@@ -487,11 +485,13 @@
           clipboard_position = "center";
           control_center_placement = "attached";
           control_center_position = "auto";
+          floating_layer = "overlay";
           floating_offset = 8;
           launcher_placement = "attached";
           launcher_position = "center";
+          list_item_background = false;
           open_near_click_clipboard = false;
-          open_near_click_control_center = true;
+          open_near_click_control_center = false;
           open_near_click_launcher = false;
           open_near_click_session = false;
           open_near_click_wallpaper = false;
@@ -524,12 +524,15 @@
           freeze_screen = true;
           pipe_command = "";
           pipe_to_command = false;
+          remember_last_region = false;
           save_to_file = true;
+          show_cursor = false;
         };
 
         session = {
           grid = false;
           grid_columns = 3;
+          show_shortcuts = true;
 
           power = { };
 
@@ -571,7 +574,7 @@
               enabled = true;
               glyph = "";
               label = "";
-              shortcut = "r";
+              shortcut = "4";
               variant = "default";
             }
             {
@@ -588,24 +591,37 @@
         };
 
         shadow = {
-          alpha = 0.55;
+          alpha = 0.55000001192092896;
           direction = "down";
         };
       };
 
-      "system" = {
+      storage = {
+        key_file = "";
+        key_source = "secret-service";
+      };
+
+      system = {
         monitor = {
+          cpu_freq_activity_threshold = 2.5;
+          cpu_freq_critical_threshold = 4.5;
           cpu_poll_seconds = 2.0;
           cpu_temp_activity_threshold = 60.0;
           cpu_temp_critical_threshold = 85.0;
           cpu_temp_sensor_path = "";
           cpu_usage_activity_threshold = 50.0;
           cpu_usage_critical_threshold = 90.0;
-          disk_pct_activity_threshold = 80.0;
-          disk_pct_critical_threshold = 95.0;
+          disk_free_activity_threshold = 80.0;
+          disk_free_critical_threshold = 95.0;
+          disk_free_pct_activity_threshold = 80.0;
+          disk_free_pct_critical_threshold = 95.0;
           disk_poll_seconds = 10.0;
+          disk_used_activity_threshold = 80.0;
+          disk_used_critical_threshold = 95.0;
+          disk_used_pct_activity_threshold = 80.0;
+          disk_used_pct_critical_threshold = 95.0;
           enabled = true;
-          gpu_poll_seconds = 0.0;
+          gpu_poll_seconds = 5.0;
           gpu_temp_activity_threshold = 60.0;
           gpu_temp_critical_threshold = 85.0;
           gpu_usage_activity_threshold = 50.0;
@@ -646,19 +662,12 @@
         directory = toString assets.wallpaper-dir;
         directory_dark = "";
         directory_light = "";
-        edge_smoothness = 0.3;
+        edge_smoothness = 0.30000001192092896;
         enabled = true;
         fill_color = "";
         fill_mode = "crop";
         per_monitor_directories = false;
-        transition = [
-          "fade"
-          "wipe"
-          "disc"
-          "stripes"
-          "zoom"
-          "honeycomb"
-        ];
+        transition = [ "fade" "wipe" "disc" "stripes" "zoom" "honeycomb" ];
         transition_duration = 1500.0;
         transition_on_startup = false;
 
@@ -685,32 +694,38 @@
           title_scroll = "none";
           type = "active_window";
         };
+
         clock = {
           format = "{:%d %B %H:%M}";
           type = "clock";
         };
+
         cpu = {
           stat = "cpu_usage";
           type = "sysmon";
         };
+
         date = {
           format = "{:%a %d %b}";
           type = "clock";
         };
+
         input_volume = {
           device = "input";
           type = "volume";
         };
+
         keyboard_layout = {
-          cycle_command = "";
           hide_when_single_layout = false;
           type = "keyboard_layout";
         };
+
         launcher = {
           custom_image_colorize = true;
           enabled = false;
           type = "launcher";
         };
+
         lock_keys = {
           display = "short";
           hide_when_off = false;
@@ -719,6 +734,7 @@
           show_scroll_lock = false;
           type = "lock_keys";
         };
+
         media = {
           art_size = 16.0;
           max_length = 220.0;
@@ -726,35 +742,44 @@
           title_scroll = "none";
           type = "media";
         };
+
         network_rx = {
           stat = "net_rx";
           type = "sysmon";
         };
+
         network_tx = {
           stat = "net_tx";
           type = "sysmon";
         };
+
         output_volume = {
           device = "output";
           type = "volume";
         };
+
         ram = {
           stat = "ram_used";
           type = "sysmon";
         };
+
         spacer = {
+          interactive = false;
           type = "spacer";
         };
+
         temp = {
           stat = "cpu_temp";
           type = "sysmon";
         };
+
         tray = {
           drawer = true;
           drawer_columns = 5;
           drawer_item_size = 20.0;
           type = "tray";
         };
+
         workspaces = {
           active_pill_size = 1.5;
           occupied_color = "surface_variant";
@@ -764,5 +789,4 @@
       };
     };
   };
-
 }
