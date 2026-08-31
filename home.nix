@@ -46,6 +46,11 @@
     rbw = {
       enable = true;
     };
+
+    nix-index = {
+      enable = true;
+      enableFishIntegration = true;
+    };
     
     zen-browser = {
       enable = true;

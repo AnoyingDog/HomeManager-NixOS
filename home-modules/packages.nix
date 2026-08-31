@@ -29,7 +29,6 @@
     xdg-desktop-portal-hyprland
     cava
     libnotify
-    git
     github-cli
 
     r2modman
